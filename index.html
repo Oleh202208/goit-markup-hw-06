@@ -66,11 +66,54 @@
         <div class="container">
           <h1 class="service-title title-hero">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>Замовити послугу</button>
+
+          <!-- =====Modal windows===== -->
+
             <div class="backdrop is-hidden" data-modal>
               <div class="modal">
                 <button class="modal-btn" data-modal-close>
                   <svg width="18" height="18"><use href="./images/css_images/icons.svg#close"></use></svg>
                 </button>
+                <!-- <h4>Залиште свої дані, ми вам передзвонимо</h4> -->
+                <form class="register-form" name="register-form" autocomplete="on" novalidate>
+                  <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+                  <div class="register-form-group" role="group">
+                    <label>
+                      <samp>Ім'я</samp>
+                      <input type="text" name="">
+                      <svg class="" width="18" height="18">
+                        <use href=""></use>
+                      </svg>
+                    </label>
+
+                    <label>
+                      <samp>Телефон</samp>
+                      <input type="tel" name="">
+                      <svg class="" width="18" height="18">
+                        <use href=""></use>
+                      </svg>
+                    </label>
+
+                    <label>
+                      <samp>Пошта</samp>
+                      <input type="email" name="">
+                      <svg class="" width="18" height="18">
+                        <use href=""></use>
+                      </svg>
+                    </label>
+                    
+                    <label>
+                      <span>Коментар</span>
+                      <textarea name="" rows="5" placeholder="Введіть текст"></textarea>
+                    </label>
+                  </div>
+
+                  <label for=""></label>
+                  <input type="checkbox">
+                  <samp>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></samp>
+
+                  <button type="submit">Відправити</button>
+                </form>
               </div>
             </div>
           
