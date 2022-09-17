@@ -261,6 +261,18 @@ background-color: var(--background-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 }
+
+/* .modal-icon{
+    color: var(--accent-color);
+}
+
+.modal-icon:hover,
+.modal-icon:focus{
+    fill: currentColor;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+} */
+
+
 .modal-btn{
     position: absolute;
     top: 8px;
@@ -276,19 +288,24 @@ border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     padding: 0;
-
+    color: var(--accent-color);
     background-color: #fff;
     cursor: pointer;
 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-btn:hover,
+.modal-btn:focus{
+    fill: currentColor;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 
 /* ======== Замовити послугу Regidter FORM======== */
 
-/* .register-form{
-    display: block;
-    margin-bottom: 28px;
-} */
 
 .register-form-field{
     display: block;
@@ -366,14 +383,6 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.register-form-agreement{
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 30px;
-
-
-}
 .register-form-btn{
     display: block;
     margin: 0 auto;
@@ -391,7 +400,8 @@ margin-bottom: 30px;
     transition: borde-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.register-form-textarea:focus{
+.register-form-textarea:focus,
+.register-form-textarea:hover{
     border-color: var(--accent-color);
 }
 
@@ -403,6 +413,8 @@ letter-spacing: 0.01em;
 color: rgba(117, 117, 117, 0.5);
 }
 .register-form-message{
+    position: relative;
+
     display: block;
     margin-bottom: 4px;
 font-size: 12px;
@@ -412,6 +424,49 @@ text-align: left;
 color:var(--primary-text-color);
 }
 
+.register-form-agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+    }
+.register-form-desc{
+    user-select: none;
+    font-family: 'Roboto';
+line-height: 1.7;
+color: var(--primary-text-color);
+}
+
+.register-form-link{
+text-decoration-line: underline;
+color: var(--accent-color);
+}
+
+.register-form-icons{
+    position: absolute;
+    left: 50px;
+}
+
+.icon-check{
+    opacity: 0;
+    fill: var(--accent-color);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-uncheck{
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-checkbox:checked + 
+.register-form-icons .icon-check{
+    opacity: 1;
+}
+
+.register-form-checkbox:checked + 
+.register-form-icons .icon-uncheck{
+    opacity: 0;
+}
 
 /* ==========Переваги, advances========*/
 
@@ -768,12 +823,45 @@ background-color: var(--accent-color);
 /* ========= Footer Forms======== */
 
 .footer-form{
+    display: flex;
     margin-left: 93px;
 }
+
+
 .footer-form-input{
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #2F303A;
     width: 358px;
     height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
+
+.footer-form-input:focus,
+.footer-form-input:hover{
+    border-color: var(--accent-color); 
+}
+
+.footer-form-input::placeholder{
+    
+}
+.footer-form-btn{
+    position: relative;
+margin-left: 12px;
+}
+.footer-form-icon{
+    position: absolute;
+    top: 15px;
+    right: 10%;
+
+}
+
 
 /* ================Портфоліо=================*/
 
